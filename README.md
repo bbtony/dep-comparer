@@ -14,7 +14,7 @@ For example, you would like to get all packages and versions of your dependencie
 ```bash
 dep-comparer testdata/go1.mod testdata/go2.mod testdata/go3.mod
 ```
-The result of work will be report in csv format, for example [examples/report-1736363047.csv](examples/report-1736363047.csv)
+The result of work will be report in csv format, for example [examples/report-1736365627.csv](examples/report-1736365627.csv)
 
 ### Experimental feature
 
