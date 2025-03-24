@@ -1,0 +1,6 @@
+.idea
+testdata/
+vendor
+bin/
+.golangci.reference.yml
+.golangci.yml

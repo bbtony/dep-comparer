@@ -1,0 +1,1462 @@
+strict digraph {
+
+
+	"github.com/spf13/pflag" [ URL="https://github.com/spf13/pflag", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/etcd/client/v2" [ URL="https://go.etcd.io/etcd/client/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/apiserver" [ URL="https://k8s.io/apiserver", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/cri-api" [ URL="https://k8s.io/cri-api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/coreos/go-systemd/v22" [ URL="https://github.com/coreos/go-systemd/v22", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/collector/pdata" [ URL="https://go.opentelemetry.io/collector/pdata", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/yaml.v2" [ URL="https://gopkg.in/yaml.v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mailru/easyjson" [ URL="https://github.com/mailru/easyjson", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.uber.org/goleak" [ URL="https://go.uber.org/goleak", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/consul/api" [ URL="https://github.com/hashicorp/consul/api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/procfs" [ URL="https://github.com/prometheus/procfs", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/mount-utils" [ URL="https://k8s.io/mount-utils", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/oauth2" [ URL="https://golang.org/x/oauth2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/dynamic-resource-allocation" [ URL="https://k8s.io/dynamic-resource-allocation", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/coredns/corefile-migration" [ URL="https://github.com/coredns/corefile-migration", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/scaleway/scaleway-sdk-go" [ URL="https://github.com/scaleway/scaleway-sdk-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/NYTimes/gziphandler" [ URL="https://github.com/NYTimes/gziphandler", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/apimachinery" [ URL="https://k8s.io/apimachinery", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/xhit/go-str2duration/v2" [ URL="https://github.com/xhit/go-str2duration/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/bbolt" [ URL="https://go.etcd.io/bbolt", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/go-cmp" [ URL="https://github.com/google/go-cmp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kubernetes" [ URL="https://k8s.io/kubernetes", color="lightblue", shape="box", style="filled",  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/felixge/httpsnoop" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/etcd/api/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/grpc-ecosystem/grpc-gateway/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/structured-merge-diff/v4" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/beorn7/perks" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-openapi/jsonpointer" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/apiserver" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/kustomize/kyaml" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/opencontainers/go-digest" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.uber.org/zap" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/crypto" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/asaskevich/govalidator" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/chai2010/gettext-go" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/cri-api" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/cespare/xxhash/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/otel/trace" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "gopkg.in/square/go-jose.v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/externaljwt" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/containerd/ttrpc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/go-cmp" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/otel/exporters/otlp/otlptrace" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/sync" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "gopkg.in/evanphx/json-patch.v4" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/inconshreveable/mousetrap" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/cpuguy83/go-md2man/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kube-aggregator" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/prometheus/common" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/otel/sdk" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/prometheus/client_model" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/cri-client" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kube-openapi" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-logr/stdr" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "cel.dev/expr" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/cadvisor" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/metrics" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/spf13/cobra" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/prometheus/procfs" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-openapi/jsonreference" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/davecgh/go-spew" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/kustomize/kustomize/v5" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/net" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/opencontainers/runc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/golang/protobuf" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/Azure/go-ansiterm" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-errors/errors" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/cyphar/filepath-securejoin" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/yaml" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/coredns/corefile-migration" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/shlex" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/coreos/go-semver" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/controller-manager" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/container-storage-interface/spec" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "google.golang.org/grpc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kms" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/apiserver-network-proxy/konnectivity-client" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/opencontainers/selinux" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/mohae/deepcopy" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/gengo/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/system-validators" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/opencontainers/runtime-spec" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/distribution/reference" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/sirupsen/logrus" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/oauth2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/Microsoft/hnslib" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/cli-runtime" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/libopenstorage/openstorage" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/knftables" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/exp" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/fxamacker/cbor/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/tmc/grpc-websocket-proxy" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/etcd/raft/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/peterbourgon/diskv" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/kustomize/api" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/csi-translation-lib" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/moby/spdystream" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/munnerz/goautoneg" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/Microsoft/go-winio" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-task/slim-sprig/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/modern-go/reflect2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/docker/go-units" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/klog/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/russross/blackfriday/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/component-helpers" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/moby/sys/userns" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/apimachinery" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/dustin/go-humanize" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.uber.org/multierr" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/mount-utils" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/containerd/containerd/api" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/tools" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/uuid" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/gogo/protobuf" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/armon/circbuf" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/ishidawataru/sctp" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/stretchr/testify" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/blang/semver/v4" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/time" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/sample-apiserver" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/coreos/go-systemd/v22" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kube-controller-manager" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/fsnotify/fsnotify" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/dynamic-resource-allocation" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/code-generator" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/stoewer/go-strcase" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "google.golang.org/genproto/googleapis/api" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/golang-jwt/jwt/v4" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/monochromegane/go-gitignore" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/pquerna/cachecontrol" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "bitbucket.org/bertimus9/systemstat" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "gopkg.in/inf.v0" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/proto/otlp" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/godbus/dbus/v5" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kube-proxy" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/grpc-ecosystem/grpc-gateway" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/karrick/godirwalk" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "gopkg.in/yaml.v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/cloud-provider" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/onsi/ginkgo/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/bbolt" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/etcd/pkg/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kubelet" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/coreos/go-oidc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/jonboulle/clockwork" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/mrunalp/fileutils" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/api" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/endpointslice" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/gregjones/httpcache" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/otel" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/component-base" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/modern-go/concurrent" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/xlab/treeprint" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/emicklei/go-restful/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/etcd/client/v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/antlr4-go/antlr/v4" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/vishvananda/netlink" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/term" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/cenkalti/backoff/v4" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/btree" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/gofuzz" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/gnostic-models" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/text" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/coredns/caddy" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/cluster-bootstrap" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/moby/term" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/lithammer/dedent" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/armon/go-socks5" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/liggitt/tabwriter" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/JeffAshton/win_pdh" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/apiextensions-apiserver" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/moby/sys/mountinfo" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/pmezard/go-difflib" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/onsi/gomega" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-logr/logr" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/spf13/pflag" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/mistifyio/go-zfs" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/grpc-ecosystem/go-grpc-middleware" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/mailru/easyjson" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/josharian/intern" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/xiang90/probing" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/moby/ipvs" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "gopkg.in/natefinch/lumberjack.v2" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/json-iterator/go" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/pod-security-admission" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/euank/go-kmsg-parser" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "google.golang.org/genproto/googleapis/rpc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/exponent-io/jsonpath" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "google.golang.org/protobuf" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/grpc-ecosystem/go-grpc-prometheus" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/containerd/log" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "sigs.k8s.io/json" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/cel-go" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/utils" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/etcd/client/pkg/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/soheilhy/cmux" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/NYTimes/gziphandler" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kubectl" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/gorilla/websocket" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/google/pprof" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-openapi/swag" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.uber.org/goleak" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/go-logr/zapr" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/etcd/server/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/mod" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/mxk/go-flowrate" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/client-go" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/mitchellh/go-wordwrap" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "k8s.io/kube-scheduler" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "google.golang.org/genproto" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/x448/float16" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/pkg/errors" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.etcd.io/etcd/client/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/containerd/errdefs" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/prometheus/client_golang" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/MakeNowJust/heredoc" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/robfig/cron/v3" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "golang.org/x/sys" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "go.opentelemetry.io/otel/metric" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/stretchr/objx" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/vishvananda/netns" [  weight=0 ];
+
+	"k8s.io/kubernetes" -> "github.com/fatih/camelcase" [  weight=0 ];
+
+	"github.com/go-task/slim-sprig/v3" [ URL="https://github.com/go-task/slim-sprig/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-logr/stdr" [ URL="https://github.com/go-logr/stdr", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/libopenstorage/openstorage" [ URL="https://github.com/libopenstorage/openstorage", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/alertmanager" [ URL="https://github.com/prometheus/alertmanager", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/opencontainers/go-digest" [ URL="https://github.com/opencontainers/go-digest", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mrunalp/fileutils" [ URL="https://github.com/mrunalp/fileutils", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/exporter-toolkit" [ URL="https://github.com/prometheus/exporter-toolkit", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/go-rootcerts" [ URL="https://github.com/hashicorp/go-rootcerts", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opencensus.io" [ URL="https://go.opencensus.io", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/liggitt/tabwriter" [ URL="https://github.com/liggitt/tabwriter", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/otel" [ URL="https://go.opentelemetry.io/otel", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4" [ URL="https://github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/opencontainers/selinux" [ URL="https://github.com/opencontainers/selinux", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/klauspost/compress" [ URL="https://github.com/klauspost/compress", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/pkg/browser" [ URL="https://github.com/pkg/browser", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/collector/semconv" [ URL="https://go.opentelemetry.io/collector/semconv", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/code-generator" [ URL="https://k8s.io/code-generator", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/otel/metric" [ URL="https://go.opentelemetry.io/otel/metric", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/jpillora/backoff" [ URL="https://github.com/jpillora/backoff", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful" [ URL="https://go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kubelet" [ URL="https://k8s.io/kubelet", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/kolo/xmlrpc" [ URL="https://github.com/kolo/xmlrpc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/ionos-cloud/sdk-go/v6" [ URL="https://github.com/ionos-cloud/sdk-go/v6", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/jsonpointer" [ URL="https://github.com/go-openapi/jsonpointer", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/pquerna/cachecontrol" [ URL="https://github.com/pquerna/cachecontrol", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/ghodss/yaml" [ URL="https://github.com/ghodss/yaml", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/serf" [ URL="https://github.com/hashicorp/serf", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/pkg/errors" [ URL="https://github.com/pkg/errors", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/kustomize/kustomize/v5" [ URL="https://sigs.k8s.io/kustomize/kustomize/v5", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/alecthomas/units" [ URL="https://github.com/alecthomas/units", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/exponent-io/jsonpath" [ URL="https://github.com/exponent-io/jsonpath", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hetznercloud/hcloud-go/v2" [ URL="https://github.com/hetznercloud/hcloud-go/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/grafana/regexp" [ URL="https://github.com/grafana/regexp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/gregjones/httpcache" [ URL="https://github.com/gregjones/httpcache", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/text" [ URL="https://golang.org/x/text", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/container-storage-interface/spec" [ URL="https://github.com/container-storage-interface/spec", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"cloud.google.com/go/auth" [ URL="https://cloud.google.com/go/auth", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/btree" [ URL="https://github.com/google/btree", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/edsrzf/mmap-go" [ URL="https://github.com/edsrzf/mmap-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/json" [ URL="https://sigs.k8s.io/json", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/endpointslice" [ URL="https://k8s.io/endpointslice", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/sync" [ URL="https://golang.org/x/sync", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/chai2010/gettext-go" [ URL="https://github.com/chai2010/gettext-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/sample-apiserver" [ URL="https://k8s.io/sample-apiserver", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/structured-merge-diff/v4" [ URL="https://sigs.k8s.io/structured-merge-diff/v4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/munnerz/goautoneg" [ URL="https://github.com/munnerz/goautoneg", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/grpc-ecosystem/grpc-gateway" [ URL="https://github.com/grpc-ecosystem/grpc-gateway", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/AzureAD/microsoft-authentication-library-for-go" [ URL="https://github.com/AzureAD/microsoft-authentication-library-for-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/strfmt" [ URL="https://github.com/go-openapi/strfmt", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/emicklei/go-restful/v3" [ URL="https://github.com/emicklei/go-restful/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/client-go" [ URL="https://k8s.io/client-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kubectl" [ URL="https://k8s.io/kubectl", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"google.golang.org/genproto" [ URL="https://google.golang.org/genproto", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/aws/aws-sdk-go" [ URL="https://github.com/aws/aws-sdk-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/gorilla/websocket" [ URL="https://github.com/gorilla/websocket", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/onsi/ginkgo/v2" [ URL="https://github.com/onsi/ginkgo/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kube-aggregator" [ URL="https://k8s.io/kube-aggregator", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace" [ URL="https://go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-logr/zapr" [ URL="https://github.com/go-logr/zapr", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/system-validators" [ URL="https://k8s.io/system-validators", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/externaljwt" [ URL="https://k8s.io/externaljwt", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kms" [ URL="https://k8s.io/kms", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kube-proxy" [ URL="https://k8s.io/kube-proxy", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mwitkow/go-conntrack" [ URL="https://github.com/mwitkow/go-conntrack", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/ishidawataru/sctp" [ URL="https://github.com/ishidawataru/sctp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/distribution/reference" [ URL="https://github.com/distribution/reference", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/jmespath/go-jmespath" [ URL="https://github.com/jmespath/go-jmespath", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/nsf/jsondiff" [ URL="https://github.com/nsf/jsondiff", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/oklog/run" [ URL="https://github.com/oklog/run", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/pmezard/go-difflib" [ URL="https://github.com/pmezard/go-difflib", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/modern-go/concurrent" [ URL="https://github.com/modern-go/concurrent", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/otel/sdk" [ URL="https://go.opentelemetry.io/otel/sdk", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/facette/natsort" [ URL="https://github.com/facette/natsort", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/peterbourgon/diskv" [ URL="https://github.com/peterbourgon/diskv", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/inconshreveable/mousetrap" [ URL="https://github.com/inconshreveable/mousetrap", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/armon/go-socks5" [ URL="https://github.com/armon/go-socks5", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/apiextensions-apiserver" [ URL="https://k8s.io/apiextensions-apiserver", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/go-retryablehttp" [ URL="https://github.com/hashicorp/go-retryablehttp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/envoyproxy/protoc-gen-validate" [ URL="https://github.com/envoyproxy/protoc-gen-validate", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/opencontainers/runtime-spec" [ URL="https://github.com/opencontainers/runtime-spec", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/containerd/containerd/api" [ URL="https://github.com/containerd/containerd/api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/cilium/ebpf" [ URL="https://github.com/cilium/ebpf", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/gogo/protobuf" [ URL="https://github.com/gogo/protobuf", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/go-cleanhttp" [ URL="https://github.com/hashicorp/go-cleanhttp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"google.golang.org/genproto/googleapis/rpc" [ URL="https://google.golang.org/genproto/googleapis/rpc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp" [ URL="https://go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/opencontainers/image-spec" [ URL="https://github.com/opencontainers/image-spec", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/dustin/go-humanize" [ URL="https://github.com/dustin/go-humanize", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/pprof" [ URL="https://github.com/google/pprof", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/JeffAshton/win_pdh" [ URL="https://github.com/JeffAshton/win_pdh", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mistifyio/go-zfs" [ URL="https://github.com/mistifyio/go-zfs", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/square/go-jose.v2" [ URL="https://gopkg.in/square/go-jose.v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/MakeNowJust/heredoc" [ URL="https://github.com/MakeNowJust/heredoc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.uber.org/multierr" [ URL="https://go.uber.org/multierr", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/golang-jwt/jwt/v4" [ URL="https://github.com/golang-jwt/jwt/v4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/gophercloud/gophercloud" [ URL="https://github.com/gophercloud/gophercloud", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/nomad/api" [ URL="https://github.com/hashicorp/nomad/api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/ini.v1" [ URL="https://gopkg.in/ini.v1", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/component-base" [ URL="https://k8s.io/component-base", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/kylelemons/godebug" [ URL="https://github.com/kylelemons/godebug", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/rogpeppe/go-internal" [ URL="https://github.com/rogpeppe/go-internal", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/sirupsen/logrus" [ URL="https://github.com/sirupsen/logrus", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/grpc-ecosystem/go-grpc-middleware" [ URL="https://github.com/grpc-ecosystem/go-grpc-middleware", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/antlr4-go/antlr/v4" [ URL="https://github.com/antlr4-go/antlr/v4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/felixge/httpsnoop" [ URL="https://github.com/felixge/httpsnoop", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/analysis" [ URL="https://github.com/go-openapi/analysis", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/asaskevich/govalidator" [ URL="https://github.com/asaskevich/govalidator", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/klog/v2" [ URL="https://k8s.io/klog/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/client_golang" [ URL="https://github.com/prometheus/client_golang", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/net" [ URL="https://golang.org/x/net", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/golang/groupcache" [ URL="https://github.com/golang/groupcache", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kube-scheduler" [ URL="https://k8s.io/kube-scheduler", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/cpuguy83/go-md2man/v2" [ URL="https://github.com/cpuguy83/go-md2man/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/gnostic-models" [ URL="https://github.com/google/gnostic-models", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"google.golang.org/api" [ URL="https://google.golang.org/api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/tmc/grpc-websocket-proxy" [ URL="https://github.com/tmc/grpc-websocket-proxy", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/klog" [ URL="https://k8s.io/klog", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"google.golang.org/genproto/googleapis/api" [ URL="https://google.golang.org/genproto/googleapis/api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/csi-translation-lib" [ URL="https://k8s.io/csi-translation-lib", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/utils" [ URL="https://k8s.io/utils", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp" [ URL="https://go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mdlayher/socket" [ URL="https://github.com/mdlayher/socket", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc" [ URL="https://go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/evanphx/json-patch.v4" [ URL="https://gopkg.in/evanphx/json-patch.v4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/swag" [ URL="https://github.com/go-openapi/swag", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Azure/azure-sdk-for-go/sdk/azcore" [ URL="https://github.com/Azure/azure-sdk-for-go/sdk/azcore", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/coreos/go-oidc" [ URL="https://github.com/coreos/go-oidc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/inf.v0" [ URL="https://gopkg.in/inf.v0", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/cri-client" [ URL="https://k8s.io/cri-client", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kube-controller-manager" [ URL="https://k8s.io/kube-controller-manager", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/exp" [ URL="https://golang.org/x/exp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/opencontainers/runc" [ URL="https://github.com/opencontainers/runc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/knftables" [ URL="https://sigs.k8s.io/knftables", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/go-immutable-radix" [ URL="https://github.com/hashicorp/go-immutable-radix", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/lithammer/dedent" [ URL="https://github.com/lithammer/dedent", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/beorn7/perks" [ URL="https://github.com/beorn7/perks", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/stretchr/objx" [ URL="https://github.com/stretchr/objx", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/prometheus" [ URL="https://github.com/prometheus/prometheus", color="lightblue", shape="box", style="filled",  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.uber.org/multierr" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/davecgh/go-spew" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/ionos-cloud/sdk-go/v6" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/planetscale/vtprotobuf" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "sigs.k8s.io/json" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/loads" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/Code-Hex/go-generics-cache" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/moby/term" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "gopkg.in/evanphx/json-patch.v4" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "google.golang.org/protobuf" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/serf" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/gorilla/websocket" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-logr/stdr" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/nomad/api" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/digitalocean/godo" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/googleapis/enterprise-certificate-proxy" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "k8s.io/utils" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/x448/float16" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/moby/docker-image-spec" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/time" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/exporter-toolkit" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/fxamacker/cbor/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/AzureAD/microsoft-authentication-library-for-go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/fatih/color" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/spf13/pflag" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/coreos/go-systemd/v22" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opencensus.io" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mwitkow/go-conntrack" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/net" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/jpillora/backoff" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.mongodb.org/mongo-driver" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.uber.org/automaxprocs" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/xhit/go-str2duration/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/beorn7/perks" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/stretchr/objx" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mattn/go-colorable" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/ovh/go-ovh" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/miekg/dns" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/google/pprof" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/grpc-ecosystem/grpc-gateway/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/term" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "k8s.io/client-go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/errors" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/containerd/log" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/envoyproxy/go-control-plane" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "gotest.tools/v3" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/googleapis/gax-go/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/Azure/azure-sdk-for-go/sdk/internal" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/jsonreference" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "google.golang.org/genproto/googleapis/rpc" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/gogo/protobuf" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/errwrap" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/dennwc/varint" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/distribution/reference" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/text" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/sigv4" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/sys" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "google.golang.org/grpc" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "k8s.io/klog" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "gopkg.in/ini.v1" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/cespare/xxhash/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/mod" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/otel" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/otel/exporters/otlp/otlptrace" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/grpc-ecosystem/grpc-gateway" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/golang/protobuf" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/julienschmidt/httprouter" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/asaskevich/govalidator" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/armon/go-metrics" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-zookeeper/zk" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "k8s.io/kube-openapi" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/facette/natsort" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/docker/docker" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/client_golang" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "k8s.io/apimachinery" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/google/gofuzz" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/cenkalti/backoff/v4" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "cloud.google.com/go/auth/oauth2adapt" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/go-cleanhttp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/scaleway/scaleway-sdk-go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/opencontainers/runtime-spec" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/pmezard/go-difflib" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "sigs.k8s.io/structured-merge-diff/v4" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/crypto" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/josharian/intern" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/aws/aws-sdk-go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "k8s.io/api" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/linode/linodego" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mitchellh/go-homedir" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/google/go-querystring" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/sirupsen/logrus" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/google/go-cmp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/go-retryablehttp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.uber.org/atomic" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "gopkg.in/inf.v0" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/otel/trace" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/spec" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/common/assets" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/gophercloud/gophercloud" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/google/uuid" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/client_model" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/exp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/go-immutable-radix" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/Microsoft/go-winio" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/go-hclog" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/analysis" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "cloud.google.com/go/auth" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/klauspost/compress" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hetznercloud/hcloud-go/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/munnerz/goautoneg" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/validate" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/go-multierror" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/strfmt" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "cloud.google.com/go/compute/metadata" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/collector/semconv" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/swag" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/golang/snappy" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "gopkg.in/yaml.v3" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/tools" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.uber.org/goleak" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/json-iterator/go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/golang/groupcache" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/procfs" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/godbus/dbus/v5" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/pkg/browser" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-resty/resty/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/docker/go-connections" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/Azure/azure-sdk-for-go/sdk/azcore" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/Azure/azure-sdk-for-go/sdk/azidentity" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/imdario/mergo" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/alecthomas/kingpin/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/oauth2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/vultr/govultr/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/otel/sdk" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/kylelemons/godebug" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mailru/easyjson" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/ghodss/yaml" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/golang-jwt/jwt/v5" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/oklog/run" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/alertmanager" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mdlayher/socket" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/pkg/errors" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/go-rootcerts" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/felixge/httpsnoop" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/docker/go-units" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/prometheus/common" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/cronexpr" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/pbnjay/memory" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/morikuni/aec" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/grafana/regexp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-logr/logr" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/golang/glog" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "gopkg.in/yaml.v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/oklog/ulid" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/consul/api" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/nsf/jsondiff" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/cncf/xds/go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "k8s.io/klog/v2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/bboreham/go-loser" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "golang.org/x/sync" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/go-openapi/jsonpointer" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/collector/pdata" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/fsnotify/fsnotify" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/kolo/xmlrpc" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/google/s2a-go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mdlayher/vsock" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mitchellh/mapstructure" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/modern-go/reflect2" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/hashicorp/golang-lru" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/containerd/cgroups/v3" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/shurcooL/httpfs" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/jmespath/go-jmespath" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/opencontainers/go-digest" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/proto/otlp" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/stretchr/testify" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/edsrzf/mmap-go" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/cilium/ebpf" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute/v5" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/KimMachineGun/automemlimit" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/opencontainers/image-spec" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/google/gnostic-models" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/modern-go/concurrent" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/mattn/go-isatty" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/emicklei/go-restful/v3" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "google.golang.org/genproto/googleapis/api" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "sigs.k8s.io/yaml" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/alecthomas/units" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "github.com/envoyproxy/protoc-gen-validate" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "go.opentelemetry.io/otel/metric" [  weight=0 ];
+
+	"github.com/prometheus/prometheus" -> "google.golang.org/api" [  weight=0 ];
+
+	"github.com/golang/snappy" [ URL="https://github.com/golang/snappy", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/controller-manager" [ URL="https://k8s.io/controller-manager", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/planetscale/vtprotobuf" [ URL="https://github.com/planetscale/vtprotobuf", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/common/assets" [ URL="https://github.com/prometheus/common/assets", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/docker/go-units" [ URL="https://github.com/docker/go-units", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/containerd/ttrpc" [ URL="https://github.com/containerd/ttrpc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/blang/semver/v4" [ URL="https://github.com/blang/semver/v4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/kube-openapi" [ URL="https://k8s.io/kube-openapi", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/mod" [ URL="https://golang.org/x/mod", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mattn/go-isatty" [ URL="https://github.com/mattn/go-isatty", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/errwrap" [ URL="https://github.com/hashicorp/errwrap", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/otel/trace" [ URL="https://go.opentelemetry.io/otel/trace", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc" [ URL="https://go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Code-Hex/go-generics-cache" [ URL="https://github.com/Code-Hex/go-generics-cache", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/client_model" [ URL="https://github.com/prometheus/client_model", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/loads" [ URL="https://github.com/go-openapi/loads", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/cloud-provider" [ URL="https://k8s.io/cloud-provider", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/golang-lru" [ URL="https://github.com/hashicorp/golang-lru", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/apiserver-network-proxy/konnectivity-client" [ URL="https://sigs.k8s.io/apiserver-network-proxy/konnectivity-client", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/dennwc/varint" [ URL="https://github.com/dennwc/varint", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/grpc-ecosystem/go-grpc-prometheus" [ URL="https://github.com/grpc-ecosystem/go-grpc-prometheus", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/spec" [ URL="https://github.com/go-openapi/spec", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/cyphar/filepath-securejoin" [ URL="https://github.com/cyphar/filepath-securejoin", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/armon/circbuf" [ URL="https://github.com/armon/circbuf", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Microsoft/go-winio" [ URL="https://github.com/Microsoft/go-winio", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/jonboulle/clockwork" [ URL="https://github.com/jonboulle/clockwork", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/envoyproxy/go-control-plane" [ URL="https://github.com/envoyproxy/go-control-plane", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/sigv4" [ URL="https://github.com/prometheus/sigv4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/stoewer/go-strcase" [ URL="https://github.com/stoewer/go-strcase", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/containerd/cgroups/v3" [ URL="https://github.com/containerd/cgroups/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/cel-go" [ URL="https://github.com/google/cel-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-logr/logr" [ URL="https://github.com/go-logr/logr", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/vishvananda/netns" [ URL="https://github.com/vishvananda/netns", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/shurcooL/httpfs" [ URL="https://github.com/shurcooL/httpfs", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/proto/otlp" [ URL="https://go.opentelemetry.io/proto/otlp", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/etcd/client/pkg/v3" [ URL="https://go.etcd.io/etcd/client/pkg/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/go-hclog" [ URL="https://github.com/hashicorp/go-hclog", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/xlab/treeprint" [ URL="https://github.com/xlab/treeprint", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mitchellh/go-wordwrap" [ URL="https://github.com/mitchellh/go-wordwrap", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/otel/exporters/otlp/otlptrace" [ URL="https://go.opentelemetry.io/otel/exporters/otlp/otlptrace", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/ovh/go-ovh" [ URL="https://github.com/ovh/go-ovh", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/docker/docker" [ URL="https://github.com/docker/docker", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/moby/term" [ URL="https://github.com/moby/term", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/go-querystring" [ URL="https://github.com/google/go-querystring", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mxk/go-flowrate" [ URL="https://github.com/mxk/go-flowrate", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.mongodb.org/mongo-driver" [ URL="https://go.mongodb.org/mongo-driver", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/prometheus/common" [ URL="https://github.com/prometheus/common", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/go-multierror" [ URL="https://github.com/hashicorp/go-multierror", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mdlayher/vsock" [ URL="https://github.com/mdlayher/vsock", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/armon/go-metrics" [ URL="https://github.com/armon/go-metrics", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/euank/go-kmsg-parser" [ URL="https://github.com/euank/go-kmsg-parser", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/bboreham/go-loser" [ URL="https://github.com/bboreham/go-loser", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-resty/resty/v2" [ URL="https://github.com/go-resty/resty/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/miekg/dns" [ URL="https://github.com/miekg/dns", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/moby/sys/mountinfo" [ URL="https://github.com/moby/sys/mountinfo", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/component-helpers" [ URL="https://k8s.io/component-helpers", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/pod-security-admission" [ URL="https://k8s.io/pod-security-admission", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.uber.org/automaxprocs" [ URL="https://go.uber.org/automaxprocs", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/containerd/log" [ URL="https://github.com/containerd/log", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/containerd/errdefs" [ URL="https://github.com/containerd/errdefs", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/uuid" [ URL="https://github.com/google/uuid", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/hashicorp/cronexpr" [ URL="https://github.com/hashicorp/cronexpr", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/time" [ URL="https://golang.org/x/time", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute/v5" [ URL="https://github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute/v5", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/cli-runtime" [ URL="https://k8s.io/cli-runtime", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/imdario/mergo" [ URL="https://github.com/imdario/mergo", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"cloud.google.com/go/auth/oauth2adapt" [ URL="https://cloud.google.com/go/auth/oauth2adapt", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-errors/errors" [ URL="https://github.com/go-errors/errors", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Microsoft/hnslib" [ URL="https://github.com/Microsoft/hnslib", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/validate" [ URL="https://github.com/go-openapi/validate", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.uber.org/zap" [ URL="https://go.uber.org/zap", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/moby/ipvs" [ URL="https://github.com/moby/ipvs", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/vishvananda/netlink" [ URL="https://github.com/vishvananda/netlink", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/docker/go-connections" [ URL="https://github.com/docker/go-connections", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/spf13/cobra" [ URL="https://github.com/spf13/cobra", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"google.golang.org/protobuf" [ URL="https://google.golang.org/protobuf", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/term" [ URL="https://golang.org/x/term", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mattn/go-colorable" [ URL="https://github.com/mattn/go-colorable", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/grpc-ecosystem/grpc-gateway/v2" [ URL="https://github.com/grpc-ecosystem/grpc-gateway/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/monochromegane/go-gitignore" [ URL="https://github.com/monochromegane/go-gitignore", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/modern-go/reflect2" [ URL="https://github.com/modern-go/reflect2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/fatih/camelcase" [ URL="https://github.com/fatih/camelcase", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/cadvisor" [ URL="https://github.com/google/cadvisor", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-zookeeper/zk" [ URL="https://github.com/go-zookeeper/zk", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/etcd/server/v3" [ URL="https://go.etcd.io/etcd/server/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/pbnjay/memory" [ URL="https://github.com/pbnjay/memory", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/kustomize/kyaml" [ URL="https://sigs.k8s.io/kustomize/kyaml", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/json-iterator/go" [ URL="https://github.com/json-iterator/go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/sys" [ URL="https://golang.org/x/sys", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/kustomize/api" [ URL="https://sigs.k8s.io/kustomize/api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/yaml.v3" [ URL="https://gopkg.in/yaml.v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"bitbucket.org/bertimus9/systemstat" [ URL="https://bitbucket.org/bertimus9/systemstat", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/linode/linodego" [ URL="https://github.com/linode/linodego", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/digitalocean/godo" [ URL="https://github.com/digitalocean/godo", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/collector" [ URL="https://go.opentelemetry.io/collector", color="lightblue", shape="box", style="filled",  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "github.com/kr/pretty" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "github.com/pmezard/go-difflib" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "github.com/rogpeppe/go-internal" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "google.golang.org/genproto/googleapis/rpc" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "google.golang.org/grpc" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "gopkg.in/check.v1" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "github.com/davecgh/go-spew" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "golang.org/x/sys" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "gopkg.in/yaml.v3" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "github.com/stretchr/testify" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "go.uber.org/goleak" [  weight=0 ];
+
+	"go.opentelemetry.io/collector" -> "google.golang.org/protobuf" [  weight=0 ];
+
+	"github.com/googleapis/gax-go/v2" [ URL="https://github.com/googleapis/gax-go/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/etcd/raft/v3" [ URL="https://go.etcd.io/etcd/raft/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/josharian/intern" [ URL="https://github.com/josharian/intern", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/davecgh/go-spew" [ URL="https://github.com/davecgh/go-spew", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gotest.tools/v3" [ URL="https://gotest.tools/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/cncf/xds/go" [ URL="https://github.com/cncf/xds/go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.uber.org/atomic" [ URL="https://go.uber.org/atomic", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/cluster-bootstrap" [ URL="https://k8s.io/cluster-bootstrap", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/natefinch/lumberjack.v2" [ URL="https://gopkg.in/natefinch/lumberjack.v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/s2a-go" [ URL="https://github.com/google/s2a-go", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/fatih/color" [ URL="https://github.com/fatih/color", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/soheilhy/cmux" [ URL="https://github.com/soheilhy/cmux", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/oklog/ulid" [ URL="https://github.com/oklog/ulid", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/cespare/xxhash/v2" [ URL="https://github.com/cespare/xxhash/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/xiang90/probing" [ URL="https://github.com/xiang90/probing", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/karrick/godirwalk" [ URL="https://github.com/karrick/godirwalk", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/russross/blackfriday/v2" [ URL="https://github.com/russross/blackfriday/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/fsnotify/fsnotify" [ URL="https://github.com/fsnotify/fsnotify", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/googleapis/enterprise-certificate-proxy" [ URL="https://github.com/googleapis/enterprise-certificate-proxy", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/moby/sys/userns" [ URL="https://github.com/moby/sys/userns", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/metrics" [ URL="https://k8s.io/metrics", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/etcd/client/v3" [ URL="https://go.etcd.io/etcd/client/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/moby/docker-image-spec" [ URL="https://github.com/moby/docker-image-spec", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/stretchr/testify" [ URL="https://github.com/stretchr/testify", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/julienschmidt/httprouter" [ URL="https://github.com/julienschmidt/httprouter", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/KimMachineGun/automemlimit" [ URL="https://github.com/KimMachineGun/automemlimit", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/godbus/dbus/v5" [ URL="https://github.com/godbus/dbus/v5", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/morikuni/aec" [ URL="https://github.com/morikuni/aec", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/x448/float16" [ URL="https://github.com/x448/float16", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/jsonreference" [ URL="https://github.com/go-openapi/jsonreference", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/golang-jwt/jwt/v5" [ URL="https://github.com/golang-jwt/jwt/v5", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mitchellh/go-homedir" [ URL="https://github.com/mitchellh/go-homedir", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/alecthomas/kingpin/v2" [ URL="https://github.com/alecthomas/kingpin/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/fxamacker/cbor/v2" [ URL="https://github.com/fxamacker/cbor/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/crypto" [ URL="https://golang.org/x/crypto", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mohae/deepcopy" [ URL="https://github.com/mohae/deepcopy", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"sigs.k8s.io/yaml" [ URL="https://sigs.k8s.io/yaml", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/robfig/cron/v3" [ URL="https://github.com/robfig/cron/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"golang.org/x/tools" [ URL="https://golang.org/x/tools", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/golang/glog" [ URL="https://github.com/golang/glog", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Azure/go-ansiterm" [ URL="https://github.com/Azure/go-ansiterm", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/moby/spdystream" [ URL="https://github.com/moby/spdystream", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Azure/azure-sdk-for-go/sdk/azidentity" [ URL="https://github.com/Azure/azure-sdk-for-go/sdk/azidentity", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/Azure/azure-sdk-for-go/sdk/internal" [ URL="https://github.com/Azure/azure-sdk-for-go/sdk/internal", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/etcd/pkg/v3" [ URL="https://go.etcd.io/etcd/pkg/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/vultr/govultr/v2" [ URL="https://github.com/vultr/govultr/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/onsi/gomega" [ URL="https://github.com/onsi/gomega", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/gengo/v2" [ URL="https://k8s.io/gengo/v2", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"k8s.io/api" [ URL="https://k8s.io/api", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/mitchellh/mapstructure" [ URL="https://github.com/mitchellh/mapstructure", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"cloud.google.com/go/compute/metadata" [ URL="https://cloud.google.com/go/compute/metadata", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"cel.dev/expr" [ URL="https://cel.dev/expr", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/kr/pretty" [ URL="https://github.com/kr/pretty", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"google.golang.org/grpc" [ URL="https://google.golang.org/grpc", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/cenkalti/backoff/v4" [ URL="https://github.com/cenkalti/backoff/v4", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"gopkg.in/check.v1" [ URL="https://gopkg.in/check.v1", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/coreos/go-semver" [ URL="https://github.com/coreos/go-semver", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/go-openapi/errors" [ URL="https://github.com/go-openapi/errors", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"go.etcd.io/etcd/api/v3" [ URL="https://go.etcd.io/etcd/api/v3", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/coredns/caddy" [ URL="https://github.com/coredns/caddy", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/shlex" [ URL="https://github.com/google/shlex", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/google/gofuzz" [ URL="https://github.com/google/gofuzz", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+	"github.com/golang/protobuf" [ URL="https://github.com/golang/protobuf", color="lightgreen", shape="hexagon", style="filled",  weight=0 ];
+
+}
