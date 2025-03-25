@@ -2,14 +2,16 @@ package main
 
 import (
 	"context"
-	"dep-comparer/internal/parser"
-	"dep-comparer/internal/report/csv"
-	"dep-comparer/internal/report/dot"
 	"flag"
 	"fmt"
 	"log"
 	"log/slog"
 	"os"
+
+	"dep-comparer/internal/parser"
+	"dep-comparer/internal/parser/golang"
+	"dep-comparer/internal/report/csv"
+	"dep-comparer/internal/report/dot"
 )
 
 func main() {
@@ -24,7 +26,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	modules, err := parser.Parse(ctx, listOfDepFiles, 5) // TODO: 5 maybe customized by params in the future
+	modules, err := golang.Parse(ctx, listOfDepFiles)
 	if err != nil {
 		log.Fatal(err)
 	}

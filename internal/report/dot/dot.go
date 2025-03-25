@@ -1,7 +1,7 @@
 package dot
 
 import (
-	"dep-comparer/internal/parser"
+	"dep-comparer/internal/parser/types"
 	"os"
 	"strconv"
 	"time"
@@ -11,24 +11,24 @@ import (
 )
 
 func NewReport(
-	modules ...*parser.Module,
+	dependencies ...*types.Dependency,
 ) (string, error) {
 	g := graph.New(graph.StringHash, graph.Directed())
-	for _, module := range modules {
-		_ = g.AddVertex(string(module.ModulePath), graph.VertexAttributes(map[string]string{
-			"URL":   "https://" + string(module.ModulePath),
+	for _, dependency := range dependencies {
+		_ = g.AddVertex(string(dependency.DependencyPath), graph.VertexAttributes(map[string]string{
+			"URL":   "https://" + string(dependency.DependencyPath),
 			"color": "lightblue",
 			"style": "filled",
 			"shape": "box",
 		}))
-		for path, _ := range module.Dependencies {
+		for path, _ := range dependency.Dependencies {
 			_ = g.AddVertex(string(path), graph.VertexAttributes(map[string]string{
 				"URL":   "https://" + string(path),
 				"color": "lightgreen",
 				"style": "filled",
 				"shape": "hexagon",
 			}))
-			_ = g.AddEdge(string(module.ModulePath), string(path)) //, graph.EdgeAttribute("taillabel", string(version)))
+			_ = g.AddEdge(string(dependency.DependencyPath), string(path)) //, graph.EdgeAttribute("taillabel", string(version)))
 		}
 	}
 

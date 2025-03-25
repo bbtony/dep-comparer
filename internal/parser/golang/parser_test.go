@@ -1,4 +1,4 @@
-package parser
+package golang
 
 import (
 	"os"
@@ -20,11 +20,11 @@ func TestTableParseGoMod(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			mod, err := ParseGoMod(data)
+			mod, err := parseGoMod(data)
 			if err != nil {
 				t.Fatal()
 			}
-			if string(mod.ModulePath) != testCase.expected {
+			if string(mod.Name) != testCase.expected {
 				t.Errorf("got %v, want %v", mod, testCase.expected)
 			}
 		})

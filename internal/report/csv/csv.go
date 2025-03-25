@@ -1,13 +1,12 @@
 package csv
 
 import (
+	"dep-comparer/internal/parser/types"
 	"encoding/csv"
 	"log"
 	"os"
 	"strconv"
 	"time"
-
-	"dep-comparer/internal/parser"
 )
 
 const (
@@ -18,7 +17,7 @@ const (
 func NewReport(
 	listOfDependencies []string,
 	order string,
-	modules ...*parser.Module,
+	modules ...*types.Dependency,
 ) (report string, err error) {
 	var res [][]string
 
@@ -50,33 +49,33 @@ func NewReport(
 // go version |    1.20   |  1.21   |   1.19  |
 // dep_1 	  |    v1.01  |  v1.01  |  v1.01  |
 // dep_2      |   v0.0.1  |    -    |  v3.0   |
-func prepareReportByRows(listOfDependencies []string, modules ...*parser.Module) [][]string {
+func prepareReportByRows(listOfDependencies []string, dependencies ...*types.Dependency) [][]string {
 	res := make([][]string, 2, len(listOfDependencies)+2)
 
 	// set a path of module
-	// modules 	  |  service  | service | service |
-	headers := make([]string, 1, len(modules)+1)
-	headers[0] = "modules"
+	// dependencies 	  |  service  | service | service |
+	headers := make([]string, 1, len(dependencies)+1)
+	headers[0] = "dependencies"
 
 	// set a version of module
 	// go version |    1.20   |  1.21   |   1.19  |
-	goVersionHeaders := make([]string, 1, len(modules)+1)
+	goVersionHeaders := make([]string, 1, len(dependencies)+1)
 	goVersionHeaders[0] = "go version"
 
-	for _, m := range modules {
-		headers = append(headers, string(m.ModulePath))
-		goVersionHeaders = append(goVersionHeaders, "v"+string(m.GoVersion))
+	for _, m := range dependencies {
+		headers = append(headers, string(m.DependencyPath))
+		goVersionHeaders = append(goVersionHeaders, "v"+string(m.Version))
 	}
 
 	res[0] = headers
 	res[1] = goVersionHeaders
 
 	for _, dep := range listOfDependencies {
-		dependency := make([]string, 0, len(modules))
+		dependency := make([]string, 0, len(dependencies))
 		dependency = append(dependency, dep)
-		for _, m := range modules {
+		for _, m := range dependencies {
 			// here we check dependency in module dependencies if there is then add to list and go next
-			if v, ok := m.Dependencies[parser.DependencyPath(dep)]; ok {
+			if v, ok := m.Dependencies[types.DependencyPath(dep)]; ok {
 				dependency = append(dependency, string(v))
 				continue
 			}
@@ -95,7 +94,7 @@ func prepareReportByRows(listOfDependencies []string, modules ...*parser.Module)
 // module  | go version | dep_1 | dep_2 | dep_3 | dep_4 |
 // service |    1.20    |   -   |   -   | v1.01 |	-   |
 // service |    1.19    |   -   |  v3.0 | v1.0  |	-   |
-func prepareReportByColumn(listOfDependencies []string, modules ...*parser.Module) (res [][]string) {
+func prepareReportByColumn(listOfDependencies []string, modules ...*types.Dependency) (res [][]string) {
 	// make headers for csv report
 	headers := make([]string, 2, len(listOfDependencies)+2)
 	headers[0] = "module"
@@ -107,12 +106,12 @@ func prepareReportByColumn(listOfDependencies []string, modules ...*parser.Modul
 	// prepare structure of report
 	for _, m := range modules {
 		service := make([]string, 2, len(listOfDependencies)+2)
-		service[0] = string(m.ModulePath)      // put path of module
-		service[1] = "v" + string(m.GoVersion) // put go version of module
+		service[0] = string(m.DependencyPath) // put path of module
+		service[1] = "v" + string(m.Version)  // put go version of module
 
 		for _, dep := range listOfDependencies {
 			// here we check dependency in all dependencies if there is then go next
-			if v, ok := m.Dependencies[parser.DependencyPath(dep)]; ok {
+			if v, ok := m.Dependencies[types.DependencyPath(dep)]; ok {
 				service = append(service, string(v))
 				continue
 			}
