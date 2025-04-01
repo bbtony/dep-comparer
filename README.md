@@ -5,6 +5,11 @@ is the small util for developers and other people who needs to make list of depe
 This tool work with Golang and go.mod at the moment.
 I am going to add support different languages in the nearest future.
 
+dev-comparer support:
+- [x] Golang 
+- [ ] PHP (in progress)
+- [ ] JS/TS (in the nearest future)
+
 ### How it works?
 
 The main idea show you "pivot" table of your dependencies across all your repositories.
@@ -12,7 +17,7 @@ This is useful when you just have started work by SSDLC and you find on the firs
 
 For example, you would like to get all packages and versions of your dependencies in Golang's go.mod, this look like something like that:
 ```bash
-dep-comparer testdata/go1.mod testdata/go2.mod testdata/go3.mod
+dep-comparer -l=golang testdata/go1.mod testdata/go2.mod testdata/go3.mod
 ```
 The result of work will be report in csv format, for example [examples/report-1736365627.csv](examples/report-1736365627.csv)
 
@@ -23,11 +28,12 @@ You will think about visualization and will be right.
 dep-comparer support experimental feature - report in [dot-format](https://en.wikipedia.org/wiki/DOT_(graph_description_language)) and visualize in [graphviz](https://graphviz.org/Gallery/directed/)
 If you want to get dot-report use `-dot` flag, for example:
 ```bash
-dep-comparer -dot testdata/go1.mod testdata/go2.mod testdata/go3.mod
+dep-comparer -dot -l=golang testdata/go1.mod testdata/go2.mod testdata/go3.mod
 ```
 
 This approach has dependency tool graphviz which you need to install in your environment.
-After that you can use dor-report.
+After that you can use dor-report (csv-report is the default format).
+
 For example:
 ```bash
 sfdp -Gsize=67! -Goverlap=prism -Tsvg examples/graph_1736365627.dot > graph_1736365627.dot/root.svg

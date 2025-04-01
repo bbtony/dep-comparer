@@ -9,15 +9,15 @@ import (
 	"os"
 
 	"dep-comparer/internal/parser"
-	"dep-comparer/internal/parser/golang"
 	"dep-comparer/internal/report/csv"
 	"dep-comparer/internal/report/dot"
 )
 
 func main() {
 	ctx := context.Background()
-
+	var language string
 	dotFlag := flag.Bool("dot", false, "Generate dot file")
+	flag.StringVar(&language, "l", "", "Language to use")
 	flag.Parse()
 	listOfDepFiles := flag.Args()
 
@@ -26,7 +26,14 @@ func main() {
 		os.Exit(0)
 	}
 
-	modules, err := golang.Parse(ctx, listOfDepFiles)
+	programLanguage, err := parser.GetLanguageTypeByName(language)
+	if err != nil {
+		slog.Error("could not determine language", "language", err)
+		os.Exit(1)
+	}
+
+	p := parser.New()
+	modules, err := p.Parse(ctx, listOfDepFiles, programLanguage)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -1,5 +1,7 @@
 package types
 
+type Language int
+
 type DependencyVersion string
 
 type DependencyPath string
