@@ -1,5 +1,5 @@
 .idea
-testdata/
+testdata/mod.zip
 vendor
 bin/
 .golangci.reference.yml

@@ -2,6 +2,7 @@ package golang
 
 import (
 	"os"
+	"strings"
 	"testing"
 )
 
@@ -9,9 +10,9 @@ func TestTableParseGoMod(t *testing.T) {
 	testCases := []struct {
 		pathOfTestFile, expected string
 	}{
-		{"./../../testdata/go1.mod", "go.opentelemetry.io/collector"},
-		{"./../../testdata/go2.mod", "k8s.io/kubernetes"},
-		{"./../../testdata/go3.mod", "github.com/prometheus/prometheus"},
+		{"./../../../testdata/go1.mod", "go.opentelemetry.io/collector"},
+		{"./../../../testdata/go2.mod", "k8s.io/kubernetes"},
+		{"./../../../testdata/go3.mod", "github.com/prometheus/prometheus"},
 	}
 
 	for _, testCase := range testCases {
@@ -20,11 +21,12 @@ func TestTableParseGoMod(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			mod, err := parseGoMod(data)
+			name := strings.Split(testCase.pathOfTestFile, string(os.PathSeparator))
+			mod, err := ParseGoMod(name[len(name)-1], data)
 			if err != nil {
 				t.Fatal()
 			}
-			if string(mod.Name) != testCase.expected {
+			if string(mod.DependencyPath) != testCase.expected {
 				t.Errorf("got %v, want %v", mod, testCase.expected)
 			}
 		})
