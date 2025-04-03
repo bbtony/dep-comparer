@@ -5,9 +5,9 @@ import (
 	"dep-comparer/internal/parser/golang"
 	"dep-comparer/internal/parser/php"
 	"dep-comparer/internal/parser/types"
-	"dep-comparer/internal/reader"
 	"fmt"
 	"golang.org/x/sync/errgroup"
+	"os"
 	"strings"
 )
 
@@ -36,7 +36,10 @@ func (p *parser) Parse(ctx context.Context, listOfDepFiles []string, LanguageTyp
 	for _, depFile := range listOfDepFiles {
 		g.Go(func() error {
 			// read file
-			data, err := reader.ReadFile(depFile)
+			data, err := os.ReadFile(depFile)
+			if err != nil {
+				return err
+			}
 			if err != nil {
 				return err
 			}
@@ -77,8 +80,8 @@ func (p *parser) Parse(ctx context.Context, listOfDepFiles []string, LanguageTyp
 	return modules, nil
 }
 
-func GetLanguageTypeByName(nameofPrjgrammingLanguage string) (types.Language, error) {
-	switch strings.ToLower(nameofPrjgrammingLanguage) {
+func GetLanguageTypeByName(nameofProgrammingLanguage string) (types.Language, error) {
+	switch strings.ToLower(nameofProgrammingLanguage) {
 	case "go", "golang":
 		return Golang, nil
 	case "php":

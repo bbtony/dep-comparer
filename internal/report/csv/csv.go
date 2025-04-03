@@ -108,7 +108,7 @@ func prepareReportByColumn(lang string, listOfDependencies []string, modules ...
 	for _, m := range modules {
 		service := make([]string, 2, len(listOfDependencies)+2)
 		service[0] = string(m.DependencyPath) // put path of module
-		service[1] = string(m.Version)  // put  version of module
+		service[1] = string(m.Version)        // put  version of module
 
 		for _, dep := range listOfDependencies {
 			// here we check dependency in all dependencies if there is then go next
