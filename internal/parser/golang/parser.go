@@ -1,6 +1,7 @@
 package golang
 
 import (
+	"context"
 	"dep-comparer/internal/parser/types"
 
 	"golang.org/x/mod/modfile"
@@ -12,8 +13,8 @@ func newDependency() *types.Dependency {
 	}
 }
 
-// ParseGoMod - parse data of Golang dependencies file
-func ParseGoMod(nameOfFile string, data []byte) (*types.Dependency, error) {
+// Parse - parse data of Golang dependencies file
+func Parse(ctx context.Context, nameOfFile string, data []byte) (*types.Dependency, error) {
 
 	file, err := modfile.Parse(nameOfFile, data, nil)
 	if err != nil {

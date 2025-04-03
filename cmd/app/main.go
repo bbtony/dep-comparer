@@ -39,7 +39,7 @@ func main() {
 	}
 
 	listOfDeps := parser.ConvertSummarizeDepToList(parser.SummarizeModules(modules...))
-	path, err := csv.NewReport(listOfDeps, csv.ByRows, modules...)
+	path, err := csv.NewReport(language, listOfDeps, csv.ByRows, modules...)
 	if err != nil {
 		log.Fatal(err)
 	}

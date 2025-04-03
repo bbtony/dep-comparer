@@ -15,6 +15,7 @@ const (
 )
 
 func NewReport(
+	language string,
 	listOfDependencies []string,
 	order string,
 	modules ...*types.Dependency,
@@ -24,14 +25,14 @@ func NewReport(
 	switch order {
 	case ByColumn:
 		res = make([][]string, 0, len(modules)+1) // plus 1 for headers
-		res = prepareReportByColumn(listOfDependencies, modules...)
+		res = prepareReportByColumn(language, listOfDependencies, modules...)
 	case ByRows:
 		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and go version)
-		res = prepareReportByRows(listOfDependencies, modules...)
+		res = prepareReportByRows(language, listOfDependencies, modules...)
 	default:
 		// default is ByRows
 		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and go version)
-		res = prepareReportByRows(listOfDependencies, modules...)
+		res = prepareReportByRows(language, listOfDependencies, modules...)
 	}
 
 	report, err = writeAllToCSV(res)
@@ -49,7 +50,7 @@ func NewReport(
 // go version |    1.20   |  1.21   |   1.19  |
 // dep_1 	  |    v1.01  |  v1.01  |  v1.01  |
 // dep_2      |   v0.0.1  |    -    |  v3.0   |
-func prepareReportByRows(listOfDependencies []string, dependencies ...*types.Dependency) [][]string {
+func prepareReportByRows(lang string, listOfDependencies []string, dependencies ...*types.Dependency) [][]string {
 	res := make([][]string, 2, len(listOfDependencies)+2)
 
 	// set a path of module
@@ -60,11 +61,11 @@ func prepareReportByRows(listOfDependencies []string, dependencies ...*types.Dep
 	// set a version of module
 	// go version |    1.20   |  1.21   |   1.19  |
 	goVersionHeaders := make([]string, 1, len(dependencies)+1)
-	goVersionHeaders[0] = "go version"
+	goVersionHeaders[0] = lang + " version"
 
 	for _, m := range dependencies {
 		headers = append(headers, string(m.DependencyPath))
-		goVersionHeaders = append(goVersionHeaders, "v"+string(m.Version))
+		goVersionHeaders = append(goVersionHeaders, string(m.Version))
 	}
 
 	res[0] = headers
@@ -94,11 +95,11 @@ func prepareReportByRows(listOfDependencies []string, dependencies ...*types.Dep
 // module  | go version | dep_1 | dep_2 | dep_3 | dep_4 |
 // service |    1.20    |   -   |   -   | v1.01 |	-   |
 // service |    1.19    |   -   |  v3.0 | v1.0  |	-   |
-func prepareReportByColumn(listOfDependencies []string, modules ...*types.Dependency) (res [][]string) {
+func prepareReportByColumn(lang string, listOfDependencies []string, modules ...*types.Dependency) (res [][]string) {
 	// make headers for csv report
 	headers := make([]string, 2, len(listOfDependencies)+2)
 	headers[0] = "module"
-	headers[1] = "go version"
+	headers[1] = lang + " version"
 	headers = append(headers, listOfDependencies...)
 
 	res = append(res, headers)
@@ -107,7 +108,7 @@ func prepareReportByColumn(listOfDependencies []string, modules ...*types.Depend
 	for _, m := range modules {
 		service := make([]string, 2, len(listOfDependencies)+2)
 		service[0] = string(m.DependencyPath) // put path of module
-		service[1] = "v" + string(m.Version)  // put go version of module
+		service[1] = string(m.Version)  // put  version of module
 
 		for _, dep := range listOfDependencies {
 			// here we check dependency in all dependencies if there is then go next

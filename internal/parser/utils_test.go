@@ -12,7 +12,7 @@ func TestGetNameOfDependencyFile(t *testing.T) {
 		{"testdata/go1.mod", "go1.mod"},
 		{"testdata/go2.mod", "go2.mod"},
 		{"testdata/go3.mod", "go3.mod"},
-		{"testdata/composer.json", "composer.json"},
+		{"testdata/composer_laravel.json", "composer_laravel.json"},
 		{"testdata/package.json", "package.json"},
 	}
 
