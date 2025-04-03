@@ -3,6 +3,7 @@ package parser
 import (
 	"context"
 	"dep-comparer/internal/parser/golang"
+	"dep-comparer/internal/parser/php"
 	"dep-comparer/internal/parser/types"
 	"dep-comparer/internal/reader"
 	"fmt"
@@ -44,11 +45,16 @@ func (p *parser) Parse(ctx context.Context, listOfDepFiles []string, LanguageTyp
 			// parse data
 			switch LanguageType {
 			case Golang:
-				module, err = golang.ParseGoMod(GetNameOfDependencyFile(depFile), data)
+				module, err = golang.Parse(ctx, GetNameOfDependencyFile(depFile), data)
 				if err != nil {
 					return err
 				}
 			case PHP:
+
+				module, err = php.Parse(ctx, GetNameOfDependencyFile(depFile), data)
+				if err != nil {
+					return err
+				}
 			default:
 				return fmt.Errorf("this is not a supported programming language")
 			}

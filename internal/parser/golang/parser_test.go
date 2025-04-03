@@ -1,12 +1,14 @@
 package golang
 
 import (
+	"context"
 	"os"
 	"strings"
 	"testing"
 )
 
 func TestTableParseGoMod(t *testing.T) {
+	ctx := context.Background()
 	testCases := []struct {
 		pathOfTestFile, expected string
 	}{
@@ -22,7 +24,7 @@ func TestTableParseGoMod(t *testing.T) {
 				t.Fatal(err)
 			}
 			name := strings.Split(testCase.pathOfTestFile, string(os.PathSeparator))
-			mod, err := ParseGoMod(name[len(name)-1], data)
+			mod, err := Parse(ctx, name[len(name)-1], data)
 			if err != nil {
 				t.Fatal()
 			}
