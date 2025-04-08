@@ -33,13 +33,18 @@ func main() {
 	}
 
 	p := parser.New()
-	modules, err := p.Parse(ctx, listOfDepFiles, programLanguage)
+	modules, err := p.Parse(ctx, programLanguage, listOfDepFiles)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	listOfDeps := parser.ConvertSummarizeDepToList(parser.SummarizeModules(modules...))
-	path, err := csv.NewReport(language, listOfDeps, csv.ByRows, modules...)
+	dep, devDep := parser.SummarizeModules(programLanguage, modules...)
+	listOfDeps := parser.ConvertSummarizeDepToList(dep)
+	var listOfDevDeps []string
+	if devDep != nil {
+		listOfDevDeps = parser.ConvertSummarizeDepToList(devDep)
+	}
+	path, err := csv.NewReport(language, listOfDeps, listOfDevDeps, csv.ByRows, modules...)
 	if err != nil {
 		log.Fatal(err)
 	}

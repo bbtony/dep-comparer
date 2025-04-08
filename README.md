@@ -7,7 +7,7 @@ I am going to add support different languages in the nearest future.
 
 dev-comparer support:
 - [x] Golang 
-- [ ] PHP (in progress)
+- [x] PHP
 - [ ] JS/TS (in the nearest future)
 
 ### How it works?
@@ -30,13 +30,18 @@ If you want to get dot-report use `-dot` flag, for example:
 ```bash
 dep-comparer -dot -l=golang testdata/go1.mod testdata/go2.mod testdata/go3.mod
 ```
+or
+
+```bash
+dep-comparer -dot -l=php testdata/composer_laravel.json testdata/composer_symfony.json
+```
 
 This approach has dependency tool graphviz which you need to install in your environment.
 After that you can use dor-report (csv-report is the default format).
 
 For example:
 ```bash
-sfdp -Gsize=67! -Goverlap=prism -Tsvg examples/graph_1736365627.dot > graph_1736365627.dot/root.svg
+sfdp -Gsize=67! -Goverlap=prism -Tsvg examples/graph_1736365627.dot > examples/root.svg
 ```
 
 **IMPORTANT:** I am not professional in graphviz and visualization then you can use, modify and extend dot's report how you want :-)

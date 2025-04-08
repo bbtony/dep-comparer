@@ -30,6 +30,15 @@ func NewReport(
 			}))
 			_ = g.AddEdge(string(dependency.DependencyPath), string(path)) //, graph.EdgeAttribute("taillabel", string(version)))
 		}
+		for path, _ := range dependency.DevDependencies {
+			_ = g.AddVertex(string(path), graph.VertexAttributes(map[string]string{
+				"URL":   "https://" + string(path),
+				"color": "lightgreen",
+				"style": "filled",
+				"shape": "hexagon",
+			}))
+			_ = g.AddEdge(string(dependency.DependencyPath), string(path)) //, graph.EdgeAttribute("taillabel", string(version)))
+		}
 	}
 
 	fileName := "graph_" + strconv.FormatInt(time.Now().Unix(), 10) + ".dot"

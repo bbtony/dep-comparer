@@ -18,7 +18,7 @@ const (
 )
 
 type LanguageParserInterface interface {
-	Parse(ctx context.Context, listOfDepFiles []string, LanguageType types.Language) ([]*types.Dependency, error)
+	Parse(ctx context.Context, LanguageType types.Language, listOfDepFiles []string) ([]*types.Dependency, error)
 }
 type parser struct{}
 
@@ -26,7 +26,7 @@ func New() *parser {
 	return &parser{}
 }
 
-func (p *parser) Parse(ctx context.Context, listOfDepFiles []string, LanguageType types.Language) ([]*types.Dependency, error) {
+func (p *parser) Parse(ctx context.Context, LanguageType types.Language, listOfDepFiles []string) ([]*types.Dependency, error) {
 	g, ctx := errgroup.WithContext(ctx)
 
 	depParserRes := make(chan *types.Dependency, len(listOfDepFiles))
