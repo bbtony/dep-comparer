@@ -7,17 +7,34 @@ import (
 )
 
 // SummarizeModules - prepare map of dependencies from all files
-func SummarizeModules(modules ...*types.Dependency) map[types.DependencyPath]struct{} {
-	res := make(map[types.DependencyPath]struct{})
+func SummarizeModules(language types.Language, modules ...*types.Dependency) (
+	dep map[types.DependencyPath]struct{}, devDep map[types.DependencyPath]struct{},
+) {
+	dep = make(map[types.DependencyPath]struct{})
+	switch language {
+	case PHP, JS:
+		devDep = make(map[types.DependencyPath]struct{})
+	default:
+	}
+
+	// TODO: need to use concurrency
 	for _, el := range modules {
 		for path := range el.Dependencies {
-			if _, flag := res[path]; !flag {
-				res[path] = struct{}{}
+			if _, flag := dep[path]; !flag {
+				dep[path] = struct{}{}
 			}
 		}
 	}
 
-	return res
+	for _, el := range modules {
+		for path := range el.DevDependencies {
+			if _, flag := devDep[path]; !flag {
+				devDep[path] = struct{}{}
+			}
+		}
+	}
+
+	return
 }
 
 // ConvertSummarizeDepToList - prepare list of dependencies for the next reports

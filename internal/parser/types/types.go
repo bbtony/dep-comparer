@@ -13,5 +13,6 @@ type Version string
 type Dependency struct {
 	DependencyPath
 	Version
-	Dependencies map[DependencyPath]DependencyVersion
+	Dependencies    map[DependencyPath]DependencyVersion
+	DevDependencies map[DependencyPath]DependencyVersion
 }

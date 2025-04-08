@@ -17,6 +17,7 @@ const (
 func NewReport(
 	language string,
 	listOfDependencies []string,
+	listOfDevDependencies []string,
 	order string,
 	modules ...*types.Dependency,
 ) (report string, err error) {
@@ -28,11 +29,11 @@ func NewReport(
 		res = prepareReportByColumn(language, listOfDependencies, modules...)
 	case ByRows:
 		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and go version)
-		res = prepareReportByRows(language, listOfDependencies, modules...)
+		res = prepareReportByRows(language, listOfDependencies, listOfDevDependencies, modules...)
 	default:
 		// default is ByRows
 		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and go version)
-		res = prepareReportByRows(language, listOfDependencies, modules...)
+		res = prepareReportByRows(language, listOfDependencies, listOfDevDependencies, modules...)
 	}
 
 	report, err = writeAllToCSV(res)
@@ -50,7 +51,12 @@ func NewReport(
 // go version |    1.20   |  1.21   |   1.19  |
 // dep_1 	  |    v1.01  |  v1.01  |  v1.01  |
 // dep_2      |   v0.0.1  |    -    |  v3.0   |
-func prepareReportByRows(lang string, listOfDependencies []string, dependencies ...*types.Dependency) [][]string {
+func prepareReportByRows(
+	lang string,
+	listOfDependencies []string,
+	listOfDevDependencies []string,
+	dependencies ...*types.Dependency,
+) [][]string {
 	res := make([][]string, 2, len(listOfDependencies)+2)
 
 	// set a path of module
@@ -60,17 +66,18 @@ func prepareReportByRows(lang string, listOfDependencies []string, dependencies 
 
 	// set a version of module
 	// go version |    1.20   |  1.21   |   1.19  |
-	goVersionHeaders := make([]string, 1, len(dependencies)+1)
-	goVersionHeaders[0] = lang + " version"
+	versionHeaders := make([]string, 1, len(dependencies)+1)
+	versionHeaders[0] = lang + " version"
 
 	for _, m := range dependencies {
 		headers = append(headers, string(m.DependencyPath))
-		goVersionHeaders = append(goVersionHeaders, string(m.Version))
+		versionHeaders = append(versionHeaders, string(m.Version))
 	}
 
 	res[0] = headers
-	res[1] = goVersionHeaders
+	res[1] = versionHeaders
 
+	// dependencies
 	for _, dep := range listOfDependencies {
 		dependency := make([]string, 0, len(dependencies))
 		dependency = append(dependency, dep)
@@ -84,6 +91,32 @@ func prepareReportByRows(lang string, listOfDependencies []string, dependencies 
 			dependency = append(dependency, "-")
 		}
 		res = append(res, dependency)
+	}
+
+	if listOfDevDependencies != nil {
+		// next index of rows and prepare head row of require-dev
+		nextIndex := len(res) - 1
+		reqDev := make([]string, 1, len(dependencies)+1)
+		reqDev[0] = "require-dev"
+		for _, dep := range dependencies {
+			reqDev = append(reqDev, string(dep.DependencyPath))
+		}
+		res[nextIndex] = reqDev
+
+		// devDependencies
+		for _, dep := range listOfDevDependencies {
+			dependency := make([]string, 0, len(dependencies))
+			dependency = append(dependency, dep)
+			for _, m := range dependencies {
+				if v, ok := m.DevDependencies[types.DependencyPath(dep)]; ok {
+					dependency = append(dependency, string(v))
+					continue
+				}
+				dependency = append(dependency, "-")
+			}
+
+			res = append(res, dependency)
+		}
 	}
 
 	return res

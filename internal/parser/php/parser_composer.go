@@ -15,7 +15,8 @@ type composer struct {
 
 func newDependency() *types.Dependency {
 	return &types.Dependency{
-		Dependencies: make(map[types.DependencyPath]types.DependencyVersion),
+		Dependencies:    make(map[types.DependencyPath]types.DependencyVersion),
+		DevDependencies: make(map[types.DependencyPath]types.DependencyVersion),
 	}
 }
 
@@ -32,8 +33,13 @@ func Parse(ctx context.Context, name string, data []byte) (*types.Dependency, er
 	if phpVersion, ok := c.Require["php"]; ok {
 		currentDep.Version = types.Version(phpVersion)
 	}
+
 	for key, version := range c.Require {
 		currentDep.Dependencies[types.DependencyPath(key)] = types.DependencyVersion(version)
+	}
+
+	for key, dev := range c.RequireDev {
+		currentDep.DevDependencies[types.DependencyPath(key)] = types.DependencyVersion(dev)
 	}
 
 	return currentDep, nil
