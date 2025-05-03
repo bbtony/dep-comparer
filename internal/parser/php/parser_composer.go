@@ -7,10 +7,17 @@ import (
 	"fmt"
 )
 
+type Parser struct {
+
+}
 type composer struct {
 	Name       string            `json:"Name,omitempty"`
 	Require    map[string]string `json:"require,omitempty"`
 	RequireDev map[string]string `json:"require-dev,omitempty"`
+}
+
+func NewParser() *Parser {
+	return &Parser{}
 }
 
 func newDependency() *types.Dependency {
@@ -20,7 +27,7 @@ func newDependency() *types.Dependency {
 	}
 }
 
-func Parse(ctx context.Context, name string, data []byte) (*types.Dependency, error) {
+func (p *Parser) Parse(ctx context.Context, name string, data []byte) (*types.Dependency, error) {
 	var c composer
 	err := json.Unmarshal(data, &c)
 	if err != nil {

@@ -32,13 +32,17 @@ func main() {
 		os.Exit(1)
 	}
 
-	p := parser.New()
-	modules, err := p.Parse(ctx, programLanguage, listOfDepFiles)
+	p, err := parser.New(programLanguage)
+	if err != nil {
+		slog.Error("could not create parser", "parser", err)
+		os.Exit(1)
+	}
+	modules, err := p.Parse(ctx, listOfDepFiles)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	dep, devDep := parser.SummarizeModules(programLanguage, modules...)
+	dep, devDep := parser.SummarizeModules(p.LanguageType, modules...)
 	listOfDeps := parser.ConvertSummarizeDepToList(dep)
 	var listOfDevDeps []string
 	if devDep != nil {

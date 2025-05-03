@@ -17,16 +17,34 @@ const (
 	JS
 )
 
-type LanguageParserInterface interface {
-	Parse(ctx context.Context, LanguageType types.Language, listOfDepFiles []string) ([]*types.Dependency, error)
-}
-type parser struct{}
-
-func New() *parser {
-	return &parser{}
+type LanguageParser interface {
+	Parse(ctx context.Context, nameOfFile string, data []byte) (*types.Dependency, error)
 }
 
-func (p *parser) Parse(ctx context.Context, LanguageType types.Language, listOfDepFiles []string) ([]*types.Dependency, error) {
+type Parser struct {
+	LanguageType types.Language
+	LanguageParser
+}
+
+func New(LanguageType types.Language) (*Parser, error) {
+	var langParser LanguageParser
+
+	switch LanguageType {
+	case Golang:
+		langParser = golang.NewParser()
+	case PHP:
+		langParser = php.NewParser()
+	default:
+		return nil, fmt.Errorf("this is not a supported programming language")
+	}
+
+	return &Parser{
+		LanguageType:   LanguageType,
+		LanguageParser: langParser,
+	}, nil
+}
+
+func (p *Parser) Parse(ctx context.Context, listOfDepFiles []string) ([]*types.Dependency, error) {
 	g, ctx := errgroup.WithContext(ctx)
 
 	depParserRes := make(chan *types.Dependency, len(listOfDepFiles))
@@ -40,26 +58,11 @@ func (p *parser) Parse(ctx context.Context, LanguageType types.Language, listOfD
 			if err != nil {
 				return err
 			}
-			if err != nil {
-				return err
-			}
 
 			var module *types.Dependency
-			// parse data
-			switch LanguageType {
-			case Golang:
-				module, err = golang.Parse(ctx, GetNameOfDependencyFile(depFile), data)
-				if err != nil {
-					return err
-				}
-			case PHP:
-
-				module, err = php.Parse(ctx, GetNameOfDependencyFile(depFile), data)
-				if err != nil {
-					return err
-				}
-			default:
-				return fmt.Errorf("this is not a supported programming language")
+			module, err = p.LanguageParser.Parse(ctx, depFile, data)
+			if err != nil {
+				return err
 			}
 
 			depParserRes <- module
