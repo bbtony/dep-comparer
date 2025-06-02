@@ -12,9 +12,9 @@ func TestTableParseGoMod(t *testing.T) {
 	testCases := []struct {
 		pathOfTestFile, expected string
 	}{
-		{"./../../../testdata/go1.mod", "go.opentelemetry.io/collector"},
-		{"./../../../testdata/go2.mod", "k8s.io/kubernetes"},
-		{"./../../../testdata/go3.mod", "github.com/prometheus/prometheus"},
+		{"./../../../testdata/go/go1.mod", "go.opentelemetry.io/collector"},
+		{"./../../../testdata/go/go2.mod", "k8s.io/kubernetes"},
+		{"./../../../testdata/go/go3.mod", "github.com/prometheus/prometheus"},
 	}
 
 	for _, testCase := range testCases {
@@ -24,7 +24,8 @@ func TestTableParseGoMod(t *testing.T) {
 				t.Fatal(err)
 			}
 			name := strings.Split(testCase.pathOfTestFile, string(os.PathSeparator))
-			mod, err := Parse(ctx, name[len(name)-1], data)
+			p := NewParser()
+			mod, err := p.Parse(ctx, name[len(name)-1], data)
 			if err != nil {
 				t.Fatal()
 			}

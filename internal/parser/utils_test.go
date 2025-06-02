@@ -9,11 +9,15 @@ func TestGetNameOfDependencyFile(t *testing.T) {
 	testCases := []struct {
 		pathOfFile, expectedName string
 	}{
-		{"testdata/go1.mod", "go1.mod"},
-		{"testdata/go2.mod", "go2.mod"},
-		{"testdata/go3.mod", "go3.mod"},
-		{"testdata/composer_laravel.json", "composer_laravel.json"},
-		{"testdata/package.json", "package.json"},
+		{"testdata/go/go1.mod", "go1.mod"},
+		{"testdata/go/go2.mod", "go2.mod"},
+		{"testdata/go/go3.mod", "go3.mod"},
+		{"testdata/php/composer_laravel.json", "composer_laravel.json"},
+		{"testdata/php/composer_symfony.json", "composer_symfony.json"},
+		{"testdata/js/package-babel.json", "package-babel.json"},
+		{"testdata/js/package-vue.json", "package-vue.json"},
+		{"testdata/js/package-react-bootstrap.json", "package-react-bootstrap.json"},
+		{"testdata/js/package-solana-web3.js.json", "package-solana-web3.js.json"},
 	}
 
 	for _, testCase := range testCases {

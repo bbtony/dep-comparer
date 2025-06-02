@@ -10,3 +10,6 @@ build-windows:
 
 zip: mkdir build-linux build-windows
 	zip linux_amd64.zip bin/linux_amd64/dep-comparer && zip windows_amd64.zip bin/windows_amd64/dep-comparer.exe
+
+test:
+	go test ./...

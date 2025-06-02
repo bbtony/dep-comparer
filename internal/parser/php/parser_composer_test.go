@@ -13,8 +13,8 @@ func TestParse(t *testing.T) {
 	testCases := []struct {
 		pathOfTestFile, expected string
 	}{
-		{"./../../../testdata/composer_laravel.json", "laravel/framework"},
-		{"./../../../testdata/composer_symfony.json", "symfony/symfony"},
+		{"./../../../testdata/php/composer_laravel.json", "laravel/framework"},
+		{"./../../../testdata/php/composer_symfony.json", "symfony/symfony"},
 	}
 
 	for _, testCase := range testCases {
@@ -24,7 +24,9 @@ func TestParse(t *testing.T) {
 				t.Fatal(err)
 			}
 			name := strings.Split(testCase.pathOfTestFile, string(os.PathSeparator))
-			mod, err := Parse(ctx, name[len(name)-1], data)
+			p := NewParser()
+
+			mod, err := p.Parse(ctx, name[len(name)-1], data)
 			if err != nil {
 				t.Fatal()
 			}
