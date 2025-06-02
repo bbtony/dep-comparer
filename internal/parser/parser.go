@@ -3,6 +3,7 @@ package parser
 import (
 	"context"
 	"dep-comparer/internal/parser/golang"
+	"dep-comparer/internal/parser/js"
 	"dep-comparer/internal/parser/php"
 	"dep-comparer/internal/parser/types"
 	"fmt"
@@ -34,6 +35,8 @@ func New(LanguageType types.Language) (*Parser, error) {
 		langParser = golang.NewParser()
 	case PHP:
 		langParser = php.NewParser()
+	case JS:
+		langParser = js.NewParser()
 	default:
 		return nil, fmt.Errorf("this is not a supported programming language")
 	}
@@ -93,5 +96,18 @@ func GetLanguageTypeByName(nameofProgrammingLanguage string) (types.Language, er
 		return JS, nil
 	default:
 		return types.Language(0), fmt.Errorf("unknown language")
+	}
+}
+
+func GetLanguageNameByType(t types.Language) (string, error) {
+	switch t {
+	case Golang:
+		return "go", nil
+	case PHP:
+		return "php", nil
+	case JS:
+		return "js", nil
+	default:
+		return "", fmt.Errorf("unknown type")
 	}
 }

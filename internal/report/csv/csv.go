@@ -1,6 +1,7 @@
 package csv
 
 import (
+	"dep-comparer/internal/parser"
 	"dep-comparer/internal/parser/types"
 	"encoding/csv"
 	"log"
@@ -15,7 +16,7 @@ const (
 )
 
 func NewReport(
-	language string,
+	language types.Language,
 	listOfDependencies []string,
 	listOfDevDependencies []string,
 	order string,
@@ -52,11 +53,15 @@ func NewReport(
 // dep_1 	  |    v1.01  |  v1.01  |  v1.01  |
 // dep_2      |   v0.0.1  |    -    |  v3.0   |
 func prepareReportByRows(
-	lang string,
+	languageType types.Language,
 	listOfDependencies []string,
 	listOfDevDependencies []string,
 	dependencies ...*types.Dependency,
 ) [][]string {
+
+	var lang string
+	lang, _ = parser.GetLanguageNameByType(languageType)
+
 	res := make([][]string, 2, len(listOfDependencies)+2)
 
 	// set a path of module
@@ -97,7 +102,16 @@ func prepareReportByRows(
 		// next index of rows and prepare head row of require-dev
 		nextIndex := len(res) - 1
 		reqDev := make([]string, 1, len(dependencies)+1)
-		reqDev[0] = "require-dev"
+
+		switch languageType {
+		case parser.PHP:
+			reqDev[0] = "require-dev"
+		case parser.JS:
+			reqDev[0] = "devDependencies"
+		default:
+			reqDev[0] = "devDependencies"
+		}
+
 		for _, dep := range dependencies {
 			reqDev = append(reqDev, string(dep.DependencyPath))
 		}
@@ -128,7 +142,11 @@ func prepareReportByRows(
 // module  | go version | dep_1 | dep_2 | dep_3 | dep_4 |
 // service |    1.20    |   -   |   -   | v1.01 |	-   |
 // service |    1.19    |   -   |  v3.0 | v1.0  |	-   |
-func prepareReportByColumn(lang string, listOfDependencies []string, modules ...*types.Dependency) (res [][]string) {
+func prepareReportByColumn(languageType types.Language, listOfDependencies []string, modules ...*types.Dependency) (res [][]string) {
+
+	var lang string
+	lang, _ = parser.GetLanguageNameByType(languageType)
+
 	// make headers for csv report
 	headers := make([]string, 2, len(listOfDependencies)+2)
 	headers[0] = "module"

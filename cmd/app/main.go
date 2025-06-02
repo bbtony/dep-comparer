@@ -48,7 +48,7 @@ func main() {
 	if devDep != nil {
 		listOfDevDeps = parser.ConvertSummarizeDepToList(devDep)
 	}
-	path, err := csv.NewReport(language, listOfDeps, listOfDevDeps, csv.ByRows, modules...)
+	path, err := csv.NewReport(programLanguage, listOfDeps, listOfDevDeps, csv.ByRows, modules...)
 	if err != nil {
 		log.Fatal(err)
 	}
