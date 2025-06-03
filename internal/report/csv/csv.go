@@ -29,11 +29,11 @@ func NewReport(
 		res = make([][]string, 0, len(modules)+1) // plus 1 for headers
 		res = prepareReportByColumn(language, listOfDependencies, modules...)
 	case ByRows:
-		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and go version)
+		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and version)
 		res = prepareReportByRows(language, listOfDependencies, listOfDevDependencies, modules...)
 	default:
 		// default is ByRows
-		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and go version)
+		res = make([][]string, 0, len(listOfDependencies)+2) // plus 2 for headers (modules and version)
 		res = prepareReportByRows(language, listOfDependencies, listOfDevDependencies, modules...)
 	}
 
@@ -100,7 +100,7 @@ func prepareReportByRows(
 
 	if listOfDevDependencies != nil {
 		// next index of rows and prepare head row of require-dev
-		nextIndex := len(res) - 1
+		//nextIndex := len(res)
 		reqDev := make([]string, 1, len(dependencies)+1)
 
 		switch languageType {
@@ -115,7 +115,7 @@ func prepareReportByRows(
 		for _, dep := range dependencies {
 			reqDev = append(reqDev, string(dep.DependencyPath))
 		}
-		res[nextIndex] = reqDev
+		res = append(res, reqDev)
 
 		// devDependencies
 		for _, dep := range listOfDevDependencies {
