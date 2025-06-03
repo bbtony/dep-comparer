@@ -29,7 +29,7 @@ dep-comparer -l=php testdata/php/composer_laravel.json testdata/php/composer_sym
 
 example for **js/ts**
 ```bash
-dep-comparer -dot -l=-l js testdata/js/package-babel.json testdata/js/package-solana-web3.js.json testdata/js/package-react-bootstrap.json
+dep-comparer -l=-l js testdata/js/package-babel.json testdata/js/package-solana-web3.js.json testdata/js/package-react-bootstrap.json
 ```
 
 The result of work will be report in csv format, for example [examples/report-1736365627.csv](examples/report-1736365627.csv)
