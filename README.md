@@ -16,9 +16,22 @@ The main idea show you "pivot" table of your dependencies across all your reposi
 This is useful when you just have started work by SSDLC and you find on the first step of SSDLC.
 
 For example, you would like to get all packages and versions of your dependencies in Golang's go.mod, this look like something like that:
+
+example for **go**
 ```bash
 dep-comparer -l=golang testdata/go/go1.mod testdata/go/go2.mod testdata/go/go3.mod
 ```
+
+example for **php**
+```bash
+dep-comparer -l=php testdata/php/composer_laravel.json testdata/php/composer_symfony.json
+```
+
+example for **js/ts**
+```bash
+dep-comparer -dot -l=-l js testdata/js/package-babel.json testdata/js/package-solana-web3.js.json testdata/js/package-react-bootstrap.json
+```
+
 The result of work will be report in csv format, for example [examples/report-1736365627.csv](examples/report-1736365627.csv)
 
 ### Experimental feature
